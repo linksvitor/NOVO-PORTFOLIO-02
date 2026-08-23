@@ -197,6 +197,10 @@
       .sheet{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
       .sheet .vp{grid-column:span 1 !important}
       .sheet .cap{opacity:1 !important;transform:none !important;position:static !important;background:none !important;backdrop-filter:none !important;padding:10px 2px !important}
+      .reel-stagger{margin-top:0 !important}
+      #trabalhos .g3{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:10px !important}
+      #trabalhos .g4{grid-template-columns:repeat(4,minmax(0,1fr)) !important;gap:10px !important;margin-top:32px !important}
+      #trabalhos .work-meta .lbl{font-size:8.5px !important;letter-spacing:.14em !important}
     }
     @media (max-width:480px){
       .hero-h1{font-size:44px !important}
@@ -328,7 +332,7 @@
           <div class="work-meta"><span class="lbl" style="font-size:10.5px">Edição + Roteiro · Reels</span></div>
         </article>
 
-        <article class="work rv" style="margin-top:56px">
+        <article class="work rv reel-stagger" style="margin-top:56px">
           <div class="vp" style="aspect-ratio:9/16">
             <video src="videos/reel-02.mp4" poster="images/poster-reel-02.jpg" controls loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0"></video>
           </div>
