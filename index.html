@@ -8,6 +8,7 @@
 <meta property="og:title" content="Vitor S. — Criação de conteúdo e estratégia digital">
 <meta property="og:description" content="Estratégia, roteiro, edição e criatividade para transformar atenção em crescimento.">
 <meta property="og:type" content="website">
+<script>document.documentElement.classList.add('js-reveal');</script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,300..700&family=Instrument+Serif:ital@0;1&display=swap">
   <style>
@@ -100,6 +101,8 @@
 
     /* performance band (section 04) */
     .perf{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .perf-in{padding:168px 0;scroll-margin-top:90px}
+    .sec-cta{border-top:1px solid var(--line);padding:200px 0;scroll-margin-top:90px}
     .vp--perf{background:#0D0B0B;border-color:rgba(232,80,42,.16)}
     .vp--perf .mark{position:absolute;top:0;left:0;width:34px;height:2px;background:var(--accent);opacity:.8}
 
@@ -122,10 +125,9 @@
     @keyframes hin{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
     .hin-img{animation:hinimg 1.15s cubic-bezier(.16,1,.3,1) both}
     @keyframes hinimg{from{opacity:0;transform:scale(1.03);clip-path:inset(0 0 14% 0)}to{opacity:1;transform:none;clip-path:inset(0 0 0 0)}}
-    @supports (animation-timeline: view()){
-      .rv{opacity:0;transform:translateY(20px);animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 42%}
-      @keyframes rv{to{opacity:1;transform:none}}
-    }
+    /* scroll reveal — driven via IntersectionObserver in JS for cross-browser support */
+    .js-reveal .rv{opacity:0;transform:translateY(24px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+    .js-reveal .rv.in-view{opacity:1;transform:none}
     .dot{width:5px;height:5px;background:var(--accent);border-radius:50%;animation:fall 2.4s cubic-bezier(.5,0,.5,1) infinite}
     @keyframes fall{0%{transform:translateY(-16px);opacity:0}30%{opacity:1}100%{transform:translateY(22px);opacity:0}}
 
@@ -142,6 +144,8 @@
       .wrap{padding:0 56px}
       .nav-in{padding:0 56px}
       .sec{padding:132px 0}
+      .perf-in{padding:132px 0}
+      .sec-cta{padding:156px 0}
       .sec-title{font-size:38px}
     }
     @media (max-width:900px){
@@ -156,6 +160,8 @@
       .wrap{padding:0 24px}
       .nav-in{padding:0 24px;height:64px}
       .sec{padding:96px 0}
+      .perf-in{padding:96px 0}
+      .sec-cta{padding:110px 0}
       .sec-title{font-size:29px}
       .g3{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
       .g4{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
@@ -379,7 +385,7 @@
 
   <!-- ============ 06 · CRIATIVOS DE PERFORMANCE ============ -->
   <section class="perf">
-    <div class="wrap" style="padding-top:152px;padding-bottom:152px">
+    <div class="wrap perf-in">
       <div class="sec-head">
         <h2 class="sec-title"><span class="n">02</span> — Criativos estratégicos para campanhas de alta conversão</h2>
         <p class="sec-sub">Criativos desenvolvidos para disputar atenção, comunicar valor e gerar ação.</p>
@@ -461,7 +467,7 @@
   </section>
 
   <!-- ============ 11 · CTA FINAL ============ -->
-  <section id="contato" style="border-top:1px solid rgba(237,235,230,.11);padding:220px 0 200px;scroll-margin-top:90px">
+  <section id="contato" class="sec-cta">
     <div class="wrap">
       <div class="rv" style="max-width:1060px">
         <span class="lbl lbl-acc" style="font-size:11px">Contato</span>
@@ -496,5 +502,32 @@
   </footer>
 
 </div>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in-view'); });
+    return;
+  }
+  function indexWithinSiblings(el){
+    var parent = el.parentElement;
+    var siblings = Array.prototype.filter.call(parent.children, function(c){ return c.classList.contains('rv'); });
+    return siblings.indexOf(el);
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var i = indexWithinSiblings(el);
+        var delay = Math.min(i, 4) * 90;
+        setTimeout(function(){ el.classList.add('in-view'); }, delay);
+        io.unobserve(el);
+      }
+    });
+  }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+
 </body>
 </html>
