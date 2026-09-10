@@ -91,6 +91,7 @@
     /* grids */
     .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
     .g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start}
+    .g2x2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start;max-width:900px}
 
     /* contact-sheet mosaic (section 02) */
     .sheet{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
@@ -153,6 +154,7 @@
       .sec-head{grid-template-columns:1fr;gap:28px;align-items:start}
       .sec-sub{max-width:520px}
       .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .g2x2{grid-template-columns:1fr;max-width:420px;margin:0 auto}
       .svc-row{grid-template-columns:56px minmax(0,1fr);gap:20px;padding:24px 0}
       .svc-d{grid-column:1 / -1;opacity:1;transform:none;text-align:left;justify-self:start;padding-left:76px;margin-top:6px}
     }
@@ -325,7 +327,8 @@
   <section class="sec" id="destaque" style="padding-bottom:0">
     <div class="wrap">
       <div class="sec-head">
-        <h2 class="sec-title">Veja a diferença que uma edição profissional faz:</h2>
+        <h2 class="sec-title"><span class="n">01</span> — Edições para YouTube</h2>
+        <p class="sec-sub">Veja a diferença que uma edição profissional faz:</p>
       </div>
 
       <div class="rv" style="position:relative;aspect-ratio:16/9;background:#0C0C0C;border:1px solid rgba(237,235,230,.14);overflow:hidden">
@@ -340,10 +343,53 @@
       </div>
 
       <div class="rv" style="margin-top:64px">
-        <p class="lbl" style="font-size:12.5px;color:#B4B1AA;margin-bottom:18px">Vídeo publicitário para a PixPorto — canal com +287 mil inscritos</p>
+        <p class="lbl" style="font-size:12.5px;color:#B4B1AA;margin-bottom:18px">Vídeo publicitário para a Pixel Porto — canal com +287 mil inscritos</p>
         <div style="position:relative;aspect-ratio:16/9;background:#0C0C0C;border:1px solid rgba(237,235,230,.14);overflow:hidden">
-          <iframe src="https://www.youtube.com/embed/76tPPc7zJoM?modestbranding=1&rel=0&iv_load_policy=3&showinfo=0" title="Vídeo publicitário para a PixPorto" style="width:100%;height:100%;position:absolute;top:0;left:0;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/76tPPc7zJoM?modestbranding=1&rel=0&iv_load_policy=3&showinfo=0" title="Vídeo publicitário para a Pixel Porto" style="width:100%;height:100%;position:absolute;top:0;left:0;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03B · CASE UGO VIAGENS ============ -->
+  <section class="sec" id="case-ugo" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title"><span class="n">02</span> — Case Ugo Viagens</h2>
+        <p class="sec-sub">Um dos principais projetos de conteúdo em andamento.</p>
+      </div>
+
+      <div class="rv" style="margin-bottom:64px">
+        <p class="lbl lbl-ink" style="font-size:13px;margin-bottom:20px">Ugo Viagens — Case de conteúdo</p>
+        <p style="font-size:44px;line-height:1.1;letter-spacing:-.022em;font-weight:600;color:#FFFFFF;font-variation-settings:'wdth' 90">+R$ 3 milhões/mês <span class="serif" style="color:var(--accent);font-weight:400">em faturamento</span></p>
+        <p class="lbl" style="font-size:11.5px;margin-top:22px">Estratégia • Roteiro • Storytelling • Edição • Retenção</p>
+      </div>
+
+      <div class="g2x2">
+        <article class="work rv">
+          <div class="vp" style="aspect-ratio:9/16">
+            <video src="videos/ugo-viagens-01.mp4" poster="images/poster-ugo-01.jpg" controls loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0"></video>
+          </div>
+          <div class="work-meta"><span class="lbl" style="font-size:10.5px">Case Ugo Viagens</span></div>
+        </article>
+        <article class="work rv">
+          <div class="vp" style="aspect-ratio:9/16">
+            <video src="videos/ugo-viagens-02.mp4" poster="images/poster-ugo-02.jpg" controls loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0"></video>
+          </div>
+          <div class="work-meta"><span class="lbl" style="font-size:10.5px">Case Ugo Viagens</span></div>
+        </article>
+        <article class="work rv">
+          <div class="vp" style="aspect-ratio:9/16">
+            <video src="videos/ugo-viagens-03.mp4" poster="images/poster-ugo-03.jpg" controls loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0"></video>
+          </div>
+          <div class="work-meta"><span class="lbl" style="font-size:10.5px">Case Ugo Viagens</span></div>
+        </article>
+        <article class="work rv">
+          <div class="vp" style="aspect-ratio:9/16">
+            <video src="videos/ugo-viagens-04.mp4" poster="images/poster-ugo-04.jpg" controls loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0"></video>
+          </div>
+          <div class="work-meta"><span class="lbl" style="font-size:10.5px">Case Ugo Viagens</span></div>
+        </article>
       </div>
     </div>
   </section>
@@ -352,7 +398,7 @@
   <section class="sec" id="trabalhos">
     <div class="wrap">
       <div class="sec-head">
-        <h2 class="sec-title"><span class="n">02</span> — Conteúdos estratégicos com edição e roteirização própria</h2>
+        <h2 class="sec-title"><span class="n">03</span> — Edições estratégicas para retenção e conversão</h2>
         <p class="sec-sub">Conteúdo pensado para atrair, converter e reter — não só viralizar.</p>
       </div>
 
@@ -414,7 +460,7 @@
   <section class="perf">
     <div class="wrap perf-in">
       <div class="sec-head">
-        <h2 class="sec-title"><span class="n">03</span> — Criativos estratégicos para campanhas de alta conversão</h2>
+        <h2 class="sec-title"><span class="n">04</span> — Criativos estratégicos para campanhas de alta conversão</h2>
         <p class="sec-sub">Criativos desenvolvidos para disputar atenção, comunicar valor e gerar ação.</p>
       </div>
 
