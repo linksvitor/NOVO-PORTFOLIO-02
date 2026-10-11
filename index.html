@@ -104,6 +104,7 @@
     .perf{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .perf-in{padding:168px 0;scroll-margin-top:90px}
     .sec-cta{border-top:1px solid var(--line);padding:200px 0;scroll-margin-top:90px}
+    .sec-stack{padding-top:136px;padding-bottom:0}
     .vp--perf{background:#0D0B0B;border-color:rgba(232,80,42,.16)}
     .vp--perf .mark{position:absolute;top:0;left:0;width:34px;height:2px;background:var(--accent);opacity:.8}
 
@@ -145,6 +146,7 @@
       .wrap{padding:0 56px}
       .nav-in{padding:0 56px}
       .sec{padding:132px 0}
+      .sec-stack{padding:104px 0 0}
       .perf-in{padding:132px 0}
       .sec-cta{padding:156px 0}
       .sec-title{font-size:38px}
@@ -162,6 +164,7 @@
       .wrap{padding:0 24px}
       .nav-in{padding:0 24px;height:64px}
       .sec{padding:96px 0}
+      .sec-stack{padding:72px 0 0}
       .perf-in{padding:96px 0}
       .sec-cta{padding:110px 0}
       .sec-title{font-size:29px}
@@ -224,6 +227,7 @@
     <div class="nav-in">
       <a href="#top" class="wordmark">VITOR S.</a>
       <nav class="nav-links">
+        <a href="#recentes">Vídeos recentes</a>
         <a href="#trabalhos">Trabalhos</a>
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
@@ -234,6 +238,7 @@
       </label>
     </div>
     <nav class="nav-mobile">
+      <a href="#recentes">Vídeos recentes</a>
       <a href="#trabalhos">Trabalhos</a>
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
@@ -323,19 +328,54 @@
     </div>
   </section>
 
-  <!-- ============ 03 · VÍDEO EM DESTAQUE ============ -->
-  <section class="sec" id="destaque" style="padding-bottom:0">
+  <!-- ============ 03 · VÍDEOS MAIS RECENTES ============ -->
+  <section class="sec" id="recentes" style="padding-bottom:0">
     <div class="wrap">
       <div class="sec-head">
-        <h2 class="sec-title"><span class="n">01</span> — Edições para YouTube</h2>
+        <h2 class="sec-title"><span class="n">01</span> — Vídeos mais recentes</h2>
+        <p class="sec-sub">Os trabalhos mais novos do portfólio.</p>
+      </div>
+
+      <div class="g2x2">
+        <article class="work rv">
+          <div class="vp" style="aspect-ratio:9/16">
+            <video src="videos/recente-01.mp4" poster="images/poster-recente-01.jpg" controls loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0"></video>
+          </div>
+          <div class="work-meta"><span class="lbl" style="font-size:10.5px">Edição + Roteiro · Reels</span></div>
+        </article>
+        <article class="work rv">
+          <div class="vp" style="aspect-ratio:9/16">
+            <video src="videos/recente-02.mp4" poster="images/poster-recente-02.jpg" controls loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0"></video>
+          </div>
+          <div class="work-meta"><span class="lbl" style="font-size:10.5px">Edição + Roteiro · Reels</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03A · ANTES E DEPOIS ============ -->
+  <section class="sec sec-stack" id="antes-depois">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title"><span class="n">02</span> — Antes e depois</h2>
         <p class="sec-sub">Veja a diferença que uma edição profissional faz:</p>
       </div>
 
       <div class="rv" style="position:relative;aspect-ratio:16/9;background:#0C0C0C;border:1px solid rgba(237,235,230,.14);overflow:hidden">
-        <iframe src="https://www.youtube.com/embed/NTO11aa9bGg?modestbranding=1&rel=0&iv_load_policy=3&showinfo=0" title="Vídeo em destaque" style="width:100%;height:100%;position:absolute;top:0;left:0;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/NTO11aa9bGg?modestbranding=1&rel=0&iv_load_policy=3&showinfo=0" title="Antes e depois" style="width:100%;height:100%;position:absolute;top:0;left:0;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03B · EDIÇÕES PARA YOUTUBE ============ -->
+  <section class="sec sec-stack" id="destaque">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title"><span class="n">03</span> — Edições para YouTube</h2>
+        <p class="sec-sub">Edições para canais e marcas.</p>
       </div>
 
-      <div class="rv" style="margin-top:64px">
+      <div class="rv" style="margin-top:0">
         <p class="lbl" style="font-size:12.5px;color:#B4B1AA;margin-bottom:18px">Edição para a Opera GX — Navegador Gamer</p>
         <div style="position:relative;aspect-ratio:16/9;background:#0C0C0C;border:1px solid rgba(237,235,230,.14);overflow:hidden">
           <iframe src="https://www.youtube.com/embed/GrGT0eIZW5I?modestbranding=1&rel=0&iv_load_policy=3&showinfo=0" title="Edição para a Opera GX — Navegador Gamer" style="width:100%;height:100%;position:absolute;top:0;left:0;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -358,13 +398,13 @@
     </div>
   </section>
 
-  <!-- ============ 03B · CASE UGO VIAGENS ============ -->
+  <!-- ============ 04 · CASE UGO VIAGENS ============ -->
   <section class="sec" id="case-ugo" style="padding-top:0">
     <div class="wrap">
       <div style="border-top:1px solid var(--line);margin-bottom:56px"></div>
 
       <div class="rv" style="margin-bottom:56px">
-        <h2 class="sec-title"><span class="n">02</span> — Case uGoo Viagens</h2>
+        <h2 class="sec-title"><span class="n">04</span> — Case uGoo Viagens</h2>
         <p class="lbl" style="font-size:11.5px;margin-top:18px">Edição • Retenção • Motion Design • Direção Visual</p>
       </div>
 
@@ -407,7 +447,7 @@
   <section class="sec" id="trabalhos">
     <div class="wrap">
       <div class="sec-head">
-        <h2 class="sec-title"><span class="n">03</span> — Edições estratégicas para retenção e conversão</h2>
+        <h2 class="sec-title"><span class="n">05</span> — Edições estratégicas para retenção e conversão</h2>
         <p class="sec-sub">Conteúdo pensado para atrair, converter e reter — não só viralizar.</p>
       </div>
 
@@ -469,7 +509,7 @@
   <section class="perf">
     <div class="wrap perf-in">
       <div class="sec-head">
-        <h2 class="sec-title"><span class="n">04</span> — Criativos estratégicos para campanhas de alta conversão</h2>
+        <h2 class="sec-title"><span class="n">06</span> — Criativos estratégicos para campanhas de alta conversão</h2>
         <p class="sec-sub">Criativos desenvolvidos para disputar atenção, comunicar valor e gerar ação.</p>
       </div>
 
